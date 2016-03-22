@@ -4,8 +4,10 @@
 <head>
   <title></title>
 
-  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap_slate.min.css" rel="stylesheet">
   <!-- pulls in the main bootstrap content we need -->
+
+  <link rel="stylesheet" href="css/styles.css">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,11 +30,11 @@
       <!-- uncollapsed navbar -->
       <div class="collapse navbar-collapse" id="main_navbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a>
+          <li><a href="index.html">Home</a>
           </li>
-          <li><a href="albums.html">Albums</a>
+          <li class="active"><a href="albums.html">Albums</a>
           </li>
-          <li><a href="photos.html">All photos</a>
+          <li><a href="photos.html">Graffiti albums</a>
           </li>
         </ul>
       </div>
@@ -41,7 +43,17 @@
   </nav>
 
   <div class="container">
-    <h1>Hello welcome to my bootstrap site!</h1>
+    <h1>Here are my albums</h1>
+
+  <ol class="breadcrumb">
+    <li><a href="index.html">Home</a></li>
+    <li class="active"><a href="albums.html">Albums</a></li>
+  </ol>
+
+
+    <a href="photo1.html"><img class="album_cover" src="images/img_1.jpg" alt="graffiti cover"></a>
+    <a href=""><img class="album_cover" src="images/img_2.jpg" alt="full english"></a>
+    <a href=""><img class="album_cover" src="images/img_3.jpg" alt="cheese"></a>
   </div>
 
   <script src="js/jquery.min.js"></script>

@@ -4,10 +4,10 @@
 <head>
   <title></title>
 
-  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap_slate.min.css" rel="stylesheet">
   <!-- pulls in the main bootstrap content we need -->
-  
-  <link rel="stylesheet" href="css/styles.css">
+
+ <link href="css/styles.css" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,15 +24,20 @@
 
       <!-- collapsed navbar -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_navbar" aria-expanded="false">open!</button>
+        <button type="button" class="navbar-toggle collapsed"
+        data-toggle="collapse"
+        data-target="#main_navbar"
+        aria-expanded="false">
+        open!
+      </button>
       </div>
 
       <!-- uncollapsed navbar -->
       <div class="collapse navbar-collapse" id="main_navbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a>
+          <li><a href="index.html">Home</a>
           </li>
-          <li><a href="albums.html">Albums</a>
+          <li class="active"><a href="albums.html">Albums</a>
           </li>
           <li><a href="photos.html">All photos</a>
           </li>
@@ -43,10 +48,16 @@
   </nav>
 
   <div class="container">
-    <h1>Here are my albums</h1>
-    <a href="photos.html"><img class="album_cover" src="images/img_1.jpg" alt="graffiti cover"></a>
-    <a href=""><img class="album_cover" src="images/img_2.jpg" alt="full english"></a>
-    <a href=""><img class="album_cover" src="images/img_3.jpg" alt="cheese"></a>
+    <h1>Some graffiti I found</h1>
+
+    <ol class="breadcrumb">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="albums.html">Albums</a></li>
+      <li><a href="photos.html">Graffiti album</a></li>
+      <li class="active"><a href="photo1.html">Graffiti picture</a></li>
+    </ol>
+
+    <img src="./images/img_1.jpg" alt="graffiti cover image" class="single_photo">
   </div>
 
   <script src="js/jquery.min.js"></script>

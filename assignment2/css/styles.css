@@ -1,0 +1,126 @@
+body {
+  padding-bottom: 50px; }
+
+.background {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: url("../img/bck5.png") no-repeat;
+  background-size: 300px; }
+  @media (min-width: 768px) {
+    .background {
+      width: 500px;
+      height: 500px;
+      background-size: 500px; } }
+
+h1 {
+  font-family: Sacramento;
+  font-size: 5rem;
+  text-align: center; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3.5rem; } }
+
+h2 {
+  margin-bottom: 3rem; }
+
+.container {
+  font-family: Oswald;
+  color: #465049; }
+
+.menu {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 1; }
+  .menu a {
+    color: #92bce0; }
+  .menu .current-task a {
+    color: #245682; }
+
+.menu-items {
+  list-style: none;
+  padding: 5px;
+  position: absolute;
+  background-color: #FAFAF8;
+  width: 100%;
+  display: none; }
+  @media (min-width: 768px) {
+    .menu-items {
+      display: block; } }
+
+.menu-items > li {
+  margin: 10px 0 10px 0;
+}
+
+.menu-items > li > a {
+
+}
+
+.menu-title {
+  background-color: #F5F5F3;
+  padding: 5px 0;
+  display: block;
+  cursor: pointer; }
+  @media (min-width: 768px) {
+    .menu-title {
+      display: none; } }
+
+.menu-trigger {
+  position: absolute;
+  top: -9999px;
+  left: -9999px; }
+  @media (min-width: 768px) {
+    .menu-trigger {
+      display: none; } }
+
+.menu-trigger:checked ~ ul {
+  display: block; }
+
+.submenu {
+  font-size: 1.3rem;
+  text-align: left;
+  text-transform: none;
+  margin-top: 1rem;
+}
+.submenu li {
+  padding-bottom: 1rem;
+}
+.submenu li a {
+  color: #337ab7 !important;
+}
+
+.line-left {
+  border-left: 1px solid #9B9B9B; }
+
+.t-explanation {
+  color: #9B9B9B;
+  font-size: 1.2rem; }
+
+.task {
+  border-bottom: 1px solid #465049;
+  padding: 15px 10px 15px 0;
+  margin: 5px 20px 0 0;
+  min-height: 70px; }
+
+.breadcrumb {
+  background: #fbfbfb; }
+
+blockquote p {
+  font-size: 1.2rem; }
+
+p {
+  padding-bottom: 1rem; }
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.5rem; } }
+
+.about {
+  font-size: 1.5rem;
+  padding-bottom: 2rem; }
+  @media (min-width: 768px) {
+    .about {
+      font-size: 2rem; } }
