@@ -1,6 +1,10 @@
 @import "breakpoint-sass/stylesheets/breakpoint";
 $sm: 768px;
 
+body {
+	font-family: sans-serif;
+}
+
 .brand {
   font-family: Pacifico, cursive;
   font-size: 12rem;
@@ -11,31 +15,16 @@ h5 {
   text-align: center;
 }
 
-.navbar-brand {
-  @include breakpoint($sm) {
-    display: none;
-  }
+.hide {
+  display: none;
 }
 
-.navbar {
-  background: none;
-  border: none;
+.inline-content {
+  padding:10px;
+  background:#fff;
+  max-width: 800px;
 }
 
-.navbar-nav {
-  text-transform: uppercase;
-  display: table;
-  float: none;
-  margin: 0 auto;
-  table-layout: fixed;
-}
-
-
-/* Global */
-
-body {
-	font-family:'Raleway',sans-serif;
-}
 
 .portfolio-section {
     padding-bottom:40px;

@@ -15,14 +15,15 @@ var animals = (function($) {
     showTemplate(gallery_template, data, 'animals-gallery');
 
     startIsotope();
-    startFancybox();
+    startPopup();
+    addResponsiveText();
   }
 
   function startIsotope() {
     $win = $( window );
 
     var isotopeContainer = $('.isotopeContainer');
-    if( !isotopeContainer.length || !jQuery().isotope ) return;
+    if( !isotopeContainer.length || !$().isotope ) return;
     $win.load(function(){
     isotopeContainer.isotope({
       itemSelector: '.isotopeSelector',
@@ -39,8 +40,8 @@ var animals = (function($) {
     });
   }
 
-  function startFancybox() {
-    $(".fancybox-pop").fancybox({
+  function startPopup() {
+    $(".popup-gallery").fancybox({
 			maxWidth	: 900,
 			maxHeight	: 700,
 			fitToView	: true,
@@ -51,6 +52,11 @@ var animals = (function($) {
 			openEffect	: 'elastic',
 			closeEffect	: 'none'
 		});
+    $('.popup-gallery-description').fancybox();
+  }
+
+  function addResponsiveText() {
+    $(".brand").fitText();
   }
 
   function main() {
