@@ -8,7 +8,7 @@
     <title>Week 4 Assignment - Animals!</title>
 
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Pacifico:400&Oxygen+Mono:400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/jquery.fancybox.css" rel="stylesheet">
     <link href="assignment.css" rel="stylesheet">
@@ -51,7 +51,7 @@
         {{#animals}}
         <div class="hide">
 			<div id='inline_content-{{name}}' class="inline-content">
-			<p><strong>{{name}}</strong></p>
+			<p><strong>{{name}} ({{../name}})</strong></p>
 			<p>{{description}}</p>
 			</div>
 		</div>
@@ -65,8 +65,8 @@
                     <div class="overlay">
                         <div class="inner-overlay">
                             <div class="inner-overlay-content with-icons">
-                                <a title="{{name}}" class="popup-gallery" rel="gallery" href="{{image1}}"><i class="fa fa-search"></i></a>
-                                <a title="{{name}}" class="popup-gallery" rel="gallery" href="{{image2}}" style="display: none" ></a>
+                                <a title="{{name}} ({{../name}})" class="popup-gallery" rel="gallery-{{../name}}" href="{{image1}}"><i class="fa fa-search"></i></a>
+                                <a title="{{name}} ({{../name}})" class="popup-gallery" rel="gallery-{{../name}}" href="{{image2}}" style="display: none" ></a>
                                 <a href="#inline_content-{{name}}" class="popup-gallery-description"><i class="fa fa-question-circle"></i></a>
                             </div>
                         </div>
