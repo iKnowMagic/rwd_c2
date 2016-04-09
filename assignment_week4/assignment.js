@@ -8,8 +8,11 @@ var animals = (function($) {
   function processHandlebars(data) {
     var navigation = $('#animals-navigation-template').html();
     var navigation_template = Handlebars.compile(navigation);
-
     showTemplate(navigation_template, data, 'animals-navigation');
+
+    var gallery = $('#animals-gallery-template').html();
+    var gallery_template = Handlebars.compile(gallery);
+    showTemplate(gallery_template, data, 'animals-gallery');
   }
 
   function main() {

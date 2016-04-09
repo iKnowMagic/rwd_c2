@@ -38,6 +38,10 @@
         <!-- /container -->
     </nav>
 
+    <div class="container">
+      <div id="animals-gallery"></div>
+    </div>
+
     <script id="animals-navigation-template" type="text/x-handlebars-template">
       <ul class="nav navbar-nav">
         {{#category}}
@@ -46,6 +50,14 @@
           </li>
         {{/category}}
       </ul>
+    </script>
+
+    <script id="animals-gallery-template" type="text/x-handlebars-template">
+        {{#category}}
+          {{#animals}}
+            {{name}}
+          {{/animals}}
+        {{/category}}
     </script>
 
 
