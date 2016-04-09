@@ -1,0 +1,24 @@
+.brand {
+  font-family: Pacifico, cursive;
+  font-size: 12rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+.navbar {
+  background: none;
+  border: none;
+}
+
+.navbar-nav {
+  text-transform: uppercase;
+  display: table;
+  float: none;
+  margin: 0 auto;
+  table-layout: fixed;
+}

@@ -1,0 +1,27 @@
+@import "breakpoint-sass/stylesheets/breakpoint";
+$sm: 768px;
+
+.brand {
+  font-family: Pacifico, cursive;
+  font-size: 12rem;
+  text-align: center;
+}
+
+.navbar-brand {
+  @include breakpoint($sm) {
+    display: none;
+  }
+}
+
+.navbar {
+  background: none;
+  border: none;
+}
+
+.navbar-nav {
+  text-transform: uppercase;
+  display: table;
+  float: none;
+  margin: 0 auto;
+  table-layout: fixed;
+}
