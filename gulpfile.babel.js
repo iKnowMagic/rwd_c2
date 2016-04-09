@@ -66,7 +66,7 @@ gulp.task('watch', () => {
     }
   });
   gulp.watch('dev/styles/*.scss', ['sass']);
-  gulp.watch('assignment_week4/*.html').on('change', reload);
+  gulp.watch(['assignment_week4/*.html', 'assignment_week4/*.js']).on('change', reload);
 });
 
 gulp.task('default', ['sass'], () => {

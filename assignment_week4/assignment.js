@@ -13,6 +13,44 @@ var animals = (function($) {
     var gallery = $('#animals-gallery-template').html();
     var gallery_template = Handlebars.compile(gallery);
     showTemplate(gallery_template, data, 'animals-gallery');
+
+    startIsotope();
+    startFancybox();
+  }
+
+  function startIsotope() {
+    $win = $( window );
+
+    var isotopeContainer = $('.isotopeContainer');
+    if( !isotopeContainer.length || !jQuery().isotope ) return;
+    $win.load(function(){
+    isotopeContainer.isotope({
+      itemSelector: '.isotopeSelector',
+      isResizeBound: true,
+      percentPosition: true
+    });
+    $('.isotopeFilters').on( 'click', 'a', function(e) {
+        $('.isotopeFilters').find('.active').removeClass('active');
+        $(this).parent().addClass('active');
+        var filterValue = $(this).attr('data-filter');
+        isotopeContainer.isotope({ filter: filterValue });
+        e.preventDefault();
+      });
+    });
+  }
+
+  function startFancybox() {
+    $(".fancybox-pop").fancybox({
+			maxWidth	: 900,
+			maxHeight	: 700,
+			fitToView	: true,
+			width		: '80%',
+			height		: '80%',
+			autoSize	: false,
+			closeClick	: false,
+			openEffect	: 'elastic',
+			closeEffect	: 'none'
+		});
   }
 
   function main() {

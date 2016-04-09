@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,68 +9,83 @@
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Pacifico:400&Oxygen+Mono:400' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
     <link href="assignment.css" rel="stylesheet">
 
-  </head>
-  <body>
-    <div class="brand">Animals</div>
+</head>
 
-    <nav class="navbar navbar-default fixed-top" role="navigation">
+<body>
+    <div class="brand">Animals!</div>
+    <h5>Welcome to Animals! Feel free to choose a category below or click on an image for a popup display.<br>
+        In popup display mode, addional images per animal type (Snake, Crocodilia, etc.) will be available. Enjoy. :)</h5>
+
+    <section class="filter-section">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="#">minimalist.</a>
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="filter-container isotopeFilters" id="animals-navigation"></div>
+                </div>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse">
-              <div id="animals-navigation">
-
-              </div>
-            </div>
-            <!-- /navbar-collapse -->
         </div>
-        <!-- /container -->
-    </nav>
+    </section>
 
-    <div class="container">
-      <div id="animals-gallery"></div>
-    </div>
+    <section class="portfolio-section port-col">
+        <div class="container">
+            <div class="row">
+                <div class="isotopeContainer" id="animals-gallery"></div>
+            </div>
+        </div>
+    </section>
 
     <script id="animals-navigation-template" type="text/x-handlebars-template">
-      <ul class="nav navbar-nav">
-        {{#category}}
-          <li>
-            <a class="page-scroll" href="#{{name}}">{{name}}</a>
-          </li>
-        {{/category}}
-      </ul>
+        <ul class="list-inline filter">
+            <li class="active"><a href="#" data-filter="*">All </a><span>/</span></li>
+            {{#category}}
+            <li><a href="#" data-filter=".{{name}}">{{name}}</a><span>/</span></li>
+            {{/category}}
+        </ul>
     </script>
 
     <script id="animals-gallery-template" type="text/x-handlebars-template">
         {{#category}}
-          {{#animals}}
-            {{name}}
-          {{/animals}}
+        {{#animals}}
+        <div class="col-sm-3 isotopeSelector {{../name}}">
+            <article class="">
+                <figure>
+                    <img src="{{image1}}" alt="">
+                    <div class="overlay-background">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="overlay">
+                        <div class="inner-overlay">
+                            <div class="inner-overlay-content with-icons">
+                                <a title="{{name}}" class="fancybox-pop" rel="gallery" href="{{image1}}"><i class="fa fa-search"></i></a>
+                                <a title="{{name}}" class="fancybox-pop" rel="gallery" href="{{image2}}" style="display: none" ></a>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+                <div class="article-title"><a href="#">{{name}}</a></div>
+            </article>
+        </div>
+        {{/animals}}
         {{/category}}
     </script>
 
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
     <!--
-    This is the latest Handlebars providing newer features, bugfixes
-    and it is documented in the Handlebars website :)
-    -->
+This is the latest Handlebars providing newer features, bugfixes
+and it is documented in the Handlebars website :)
+-->
     <script src="js/handlebars-v4.0.5.js"></script>
 
     <script src="js/bootstrap.min.js"></script>
     <script src="AnimalsData.js"></script>
     <script src="assignment.js"></script>
-  </body>
+</body>
+
 </html>
